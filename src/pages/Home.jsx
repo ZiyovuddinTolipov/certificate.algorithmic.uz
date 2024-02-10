@@ -1,7 +1,7 @@
 import logo14 from '../assets/logo14.png'
 import userimg from '../assets/tolipovblack.png'
 
-const Dialog = () => {
+function Dialog (props) {
     return (
         <dialog id="my_modal_3" className="modal">
             <div className="modal-box">
@@ -9,7 +9,7 @@ const Dialog = () => {
                     {/* if there is a button in form, it will close the modal */}
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
-                <h3 className="font-bold text-lg">Hello!</h3>
+                <h3 className="font-bold text-lg">{props.data.fullName}</h3>
                 <p className="py-4">Press ESC key or click on ✕ button to close</p>
             </div>
         </dialog>
@@ -75,11 +75,11 @@ const Home = () => {
                                     <th scope="col" className="px-6 py-3">
                                         ISM Familiya
                                     </th>
-                                    <th scope="col" className="px-6 py-3">
-                                        <button onClick={() => addBlock('my_modal_3')}>
+                                    <th scope="col" className="px-6 py-3 cursor-pointer">
+                                        <span onClick={() => addBlock('my_modal_3')}>
                                             <i className="fa-solid fa-plus text-xl" />
-                                        </button>
-                                        <Dialog />
+                                        </span>
+                                        <Dialog data={{data:1,fullName:"Abdullajon Oripov"}} name="hello"/>
                                     </th>
                                     <th scope="col" className="px-6 py-3">
                                         Category
