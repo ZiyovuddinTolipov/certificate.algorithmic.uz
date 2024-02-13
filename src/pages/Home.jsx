@@ -1,7 +1,37 @@
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from 'react';
+
 import logo14 from '../assets/logo14.png'
 import userimg from '../assets/tolipovblack.png'
 
-function Dialog (props) {
+function Dialog(props) {
+    const [date, setDate] = useState('');
+    const [savedDate, setSavedDate] = useState('');
+
+    useEffect(() => {
+        // Load saved date when component mounts
+        loadSavedDate();
+    }, []);
+
+    // Function to save date to local storage
+    const saveDate = () => {
+        localStorage.setItem('savedDate', date);
+        // alert('Date saved successfully!');
+    }
+
+    // Function to load saved date from local storage
+    const loadSavedDate = () => {
+        const savedDate = localStorage.getItem('savedDate');
+        if (savedDate) {
+            setSavedDate(savedDate);
+        }
+    }
+
+    // Function to handle date input change
+    const handleDateChange = (event) => {
+        setDate(event.target.value);
+    }
+
     return (
         <dialog id="my_modal_3" className="modal">
             <div className="modal-box">
@@ -10,7 +40,17 @@ function Dialog (props) {
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
                 <h3 className="font-bold text-lg">{props.data.fullName}</h3>
-                <p className="py-4">Press ESC key or click on ✕ button to close</p>
+                <h3 className='my-3'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, neque.</h3>
+                <form className='flex gap-2'>
+                    <input
+                        type="date"
+                        value={date}
+                        onChange={handleDateChange}
+                        className='input input-bordered input-primary w-full max-w-xs'
+                    />
+                    
+                    <button className='btn btn-active btn-primary' onClick={saveDate}>QO'SHISH</button>
+                </form>
             </div>
         </dialog>
     )
@@ -40,7 +80,7 @@ const Home = () => {
 
                     </div>
                 </nav>
-                <div className='backdrop-blur-md bg-white/10 my-2 rounded-xl min-h-[400px] px-4 py-2'>
+                <div className='backdrop-blur-md bg-white/10 my-2 rounded-xl min-h-[400px] h-auto px-4 py-2'>
                     <form className='flex gap-3 border-b-[1px] border-b-gray-900'>
                         <div>
                             <label htmlFor="default" className={sty.label}>Maktabni tanlash</label>
@@ -79,7 +119,7 @@ const Home = () => {
                                         <span onClick={() => addBlock('my_modal_3')}>
                                             <i className="fa-solid fa-plus text-xl" />
                                         </span>
-                                        <Dialog data={{data:1,fullName:"Abdullajon Oripov"}} name="hello"/>
+                                        <Dialog data={{ data: 1, fullName: "Abdullajon Oripov" }} name="hello" />
                                     </th>
                                     <th scope="col" className="px-6 py-3">
                                         Category
