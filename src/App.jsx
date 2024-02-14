@@ -6,16 +6,18 @@ import Login from "./pages/Login"
 import NotFound from './pages/NotFound';
 import Test from './pages/Test';
 import Resetpassword from './pages/ResetPassword'
+import Profile from './pages/Profile'
 
 import { ToastContainer } from "react-toastify"
-import Rout from './routers/Rout'
 function App() {
   const routes = useRoutes([
     { path: '/', element: <HomePage /> },
     { path: '/test', element: <Test /> },
     { path: '/login', element: <Login /> },
     { path: '/reset', element: <Resetpassword /> },
+    { path: '/profile', element: <Profile /> },
     { path: '*', element: <NotFound /> }
+
   ]);
 
 

@@ -1,3 +1,4 @@
+@import url(./__navbar.scss);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +11,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
     -moz-appearance: textfield;
 }

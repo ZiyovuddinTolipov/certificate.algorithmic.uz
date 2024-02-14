@@ -3,7 +3,7 @@ import DialogNewDate from './dashboard/DialogNewDate'
 import { MdOutlineSchool } from "react-icons/md";
 import { IoIosDoneAll } from "react-icons/io";
 import DialogMark from './dashboard/DialogMark';
-import TabeleMark from './dashboard/TableMark';
+// import TabeleMark from './dashboard/TableMark';
 import Navbar from '../components/Navbar'
 const Home = () => {
     const sty = {
@@ -17,7 +17,7 @@ const Home = () => {
         document.getElementById(id).showModal()
     }
     return (
-        <main className='bg-gray-50 dark:bg-gray-900'>
+        <main className='bg-gray-900'>
             <div className="flex flex-col px-6 py-8 mx-auto  p-4 max-w-[1400px] w-full">
                 <Navbar />
                 <div className='backdrop-blur-md bg-white/10 my-2 rounded-xl min-h-[400px] h-auto px-4 py-2'>
