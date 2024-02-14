@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
-
-import logo14 from '../assets/logo14.png'
-import userimg from '../assets/tolipovblack.png'
 import DialogNewDate from './dashboard/DialogNewDate'
 import { MdOutlineSchool } from "react-icons/md";
 import { IoIosDoneAll } from "react-icons/io";
 import DialogMark from './dashboard/DialogMark';
-
+import TabeleMark from './dashboard/TableMark';
+import Navbar from '../components/Navbar'
 const Home = () => {
     const sty = {
         select: "bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
@@ -21,19 +19,7 @@ const Home = () => {
     return (
         <main className='bg-gray-50 dark:bg-gray-900'>
             <div className="flex flex-col px-6 py-8 mx-auto  p-4 max-w-[1400px] w-full">
-                <nav className='flex justify-between items-center backdrop-blur-md bg-white/10 px-4 py-2 rounded-xl'>
-                    <img src={logo14} alt="As logo" className='h-12 mr-2 ' />
-                    <div className='text-white flex items-center gap-2'>
-                        <h3 className='text-xl font-semibold'>
-                            Tolipov <br /> Ziyovuddin
-                        </h3>
-                        <div className="avatar online">
-                            <div className="w-16 mask rounded-full">
-                                <img src={userimg} />
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+                <Navbar />
                 <div className='backdrop-blur-md bg-white/10 my-2 rounded-xl min-h-[400px] h-auto px-4 py-2'>
                     <form className='flex gap-3 border-b-[1px] border-b-gray-900'>
                         <div>
@@ -59,7 +45,7 @@ const Home = () => {
                     </form>
                     <div className='flex py-2'>
                         <h1 className='hidden text-white text-4xl font-semibold text-center w-full mt-5'>Hozircha hech narsa!</h1>
-                        <table className=" text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 min-w-[100%] h-auto">
+                        <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 min-w-[100%] h-auto">
                             <caption className="py-5 px-0 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-transparent">
                                 <div className='flex justify-between items-center my-2'>
                                     <h2 className='flex items-center gap-2'><span className='text-primary-500 flex items-center'>
@@ -72,7 +58,7 @@ const Home = () => {
                                         <span className='text-red-500'>
                                             IT
                                         </span></h2>
-                                    <button className=' btn btn-sm btn-info flex items-center'>Tasdiqlash <IoIosDoneAll  size={24} /></button>
+                                    <button className=' btn btn-sm btn-info flex items-center text-white'>Tasdiqlash <IoIosDoneAll size={24} /></button>
                                 </div>
                                 <p className='bg-gray-700 p-1 rounded-md'><span className='text-red-600 font-semibold'>! Eslatma </span>|<span className='bg-green-600'> alo </span>|<span className='text-black'> Kelmagan </span></p>
                             </caption>
@@ -160,6 +146,7 @@ const Home = () => {
                                 </tr>
                             </tbody>
                         </table>
+                        {/* <TabeleMark  /> */}
                     </div>
                 </div>
             </div>
