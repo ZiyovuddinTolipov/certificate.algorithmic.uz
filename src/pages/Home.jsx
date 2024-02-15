@@ -4,6 +4,28 @@ import { MdOutlineSchool } from "react-icons/md";
 import { IoIosDoneAll } from "react-icons/io";
 import DialogMark from './dashboard/DialogMark';
 // import TabeleMark from './dashboard/TableMark';
+
+function Mark(props) {
+    // console.log(typeof props.score)
+    const style = {
+        buttons: 'btn btn-sm  max-w-[80px] w-full'
+    }
+    // let props = props;
+    const returnColor = (props) => {
+        if (props.score == 0) {
+            return ' '
+        } else if (props.score == 1) {
+            return 'btn-warning'
+        } else if (props.score == 2) {
+            return 'btn-primary'
+        } else if (props.score == 3) {
+            return 'btn-secondary'
+        } else {
+            return 'btn-accent'
+        }
+    }
+    return <button className={`${style.buttons} ${returnColor(props)}`}/>
+}
 import Navbar from '../components/Navbar'
 const Home = () => {
     const sty = {
@@ -17,8 +39,8 @@ const Home = () => {
         document.getElementById(id).showModal()
     }
     return (
-        <main className='bg-gray-900'>
-            <div className="flex flex-col px-6 py-8 mx-auto  p-4 max-w-[1400px] w-full">
+        <main className='bg-gray-900 '>
+            <div className="flex flex-col px-6 py-8 mx-auto  p-4 max-w-[1400px] w-full h-100">
                 <Navbar />
                 <div className='backdrop-blur-md bg-white/10 my-2 rounded-xl min-h-[400px] h-auto px-4 py-2'>
                     <form className='flex gap-3 border-b-[1px] border-b-gray-900'>
@@ -58,7 +80,7 @@ const Home = () => {
                                         <span className='text-red-500'>
                                             IT
                                         </span></h2>
-                                    <button className=' btn btn-sm btn-info flex items-center text-white'>Tasdiqlash <IoIosDoneAll size={24} /></button>
+                                    <button className=' btn btn-sm btn-success flex items-center text-white'>Tasdiqlash <IoIosDoneAll size={24} /></button>
                                 </div>
                                 <p className='bg-gray-700 p-1 rounded-md'><span className='text-red-600 font-semibold'>! Eslatma </span>|<span className='bg-green-600'> alo </span>|<span className='text-black'> Kelmagan </span></p>
                             </caption>
@@ -74,20 +96,20 @@ const Home = () => {
                                         <DialogNewDate data={{ data: 1, fullName: "Abdullajon Oripov" }} name="hello" />
                                     </th>
                                     <th scope="col" className="px-6 py-3">
-                                        Category
+                                        12.02.2024
                                     </th>
                                     <th scope="col" className="px-6 py-3">
-                                        Price
+                                        11.02.2024
                                     </th>
                                     <th scope="col" className="px-6 py-3">
-                                        <span className="sr-only">Edit</span>
+                                        <span className="sr-only">taxrir</span>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                     <th scope="row" className="px-6 py-1 font-medium  whitespace-nowrap dark:text-white">
-                                        Apple MacBook Pro 17
+                                        Tolipov Ziyovuddin
                                     </th>
                                     <td className="px-6 py-1">
                                         <button onClick={() => addMark('addMark')}>
@@ -96,10 +118,10 @@ const Home = () => {
                                         </button>
                                     </td>
                                     <td className="px-6 py-1">
-                                        Laptop
+                                        <Mark score={1} />
                                     </td>
                                     <td className="px-6 py-1">
-                                        $2999
+                                        <Mark score={2} />
                                     </td>
                                     <td className="px-6 py-1 text-right">
                                         <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
@@ -107,7 +129,7 @@ const Home = () => {
                                 </tr>
                                 <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                     <th scope="row" className="px-6 py-1 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Microsoft Surface Pro
+                                        Salimov Sardor
                                     </th>
                                     <td className="px-6 py-1">
                                         <button>
@@ -115,19 +137,18 @@ const Home = () => {
                                         </button>
                                     </td>
                                     <td className="px-6 py-1">
-                                        Laptop PC
+                                        <Mark score={3} />
                                     </td>
                                     <td className="px-6 py-1">
-                                        $1999
+                                        <Mark score={4} />
                                     </td>
                                     <td className="px-6 py-1 text-right">
-
                                         <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                     </td>
                                 </tr>
                                 <tr className="bg-white dark:bg-gray-800">
                                     <th scope="row" className="px-6 py-1 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Magic Mouse 2
+                                        Alirizayeva Hanifabonu
                                     </th>
                                     <td className="px-6 py-1">
                                         <button>
@@ -135,10 +156,10 @@ const Home = () => {
                                         </button>
                                     </td>
                                     <td className="px-6 py-1">
-                                        Accessories
+                                        <Mark score={3} />
                                     </td>
                                     <td className="px-6 py-1">
-                                        $99
+                                        <Mark score={1} />
                                     </td>
                                     <td className="px-6 py-1 text-right">
                                         <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
