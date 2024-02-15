@@ -4,7 +4,7 @@ import students from '../../data/students.json';
 function Mark(props) {
     // console.log(typeof props.score)
     const style = {
-        buttons: 'btn btn-sm  max-w-[80px] w-full'
+        buttons: 'btn btn-sm w-full h-[100%] rounded-none'
     }
     // let props = props;
     const returnColor = (props) => {
@@ -20,7 +20,7 @@ function Mark(props) {
             return 'btn-accent'
         }
     }
-    return <button className={`${style.buttons} ${returnColor(props)}`} />
+    return <button className={`${style.buttons} ${returnColor(props)}`} >{props.comment}</button>
 }
 
 const OquvchilarJadvali = () => {
@@ -38,8 +38,8 @@ const OquvchilarJadvali = () => {
                 {students.oquvchilar.map((oquvchi, index) => (
                     <tr className='border-b bg-gray-800 border-gray-700' key={index}>
                         <td className='px-6 py-1 bg-slate-800' style={{ position: 'sticky', left: 0, zIndex: 1 }}>{oquvchi.ism}</td>
-                        {Object.values(oquvchi.baholar).map((score, index) => (
-                            <td className={score >= 0 ? 'px-6 py-1 text-center' : 'px-6 py-1 text-center bg-red-900'} key={index}>{score >= 0 ? <Mark score={score} /> : "nb"}</td>
+                        {Object.values(oquvchi.baholar).map((allScore, index) => (
+                            <td className={allScore.score >= 0 ? 'text-center' : 'text-center bg-red-900'} key={index}>{allScore.score >= 0 ? <Mark score={allScore.score} comment={allScore.comment}/> : "nb"}</td>
                         ))}
                     </tr>
                 ))}

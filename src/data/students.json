@@ -5,16 +5,46 @@
             "ism": "Ali",
             "sinf": "10-A",
             "baholar": {
-                "12.02.2023": 3,
-                "13.02.2023": 4,
-                "14.02.2023": 5,
-                "15.02.2023": 4,
-                "16.02.2023": 3,
-                "17.02.2023": 2,
-                "18.02.2023": 3,
-                "19.02.2023": 4,
-                "20.02.2023": 5,
-                "21.02.2023": 4
+                "12.02.2023": {
+                    "score": 3,
+                    "comment": "good job"
+                },
+                "13.02.2023": {
+                    "score": 4,
+                    "comment": "keep it up"
+                },
+                "14.02.2023": {
+                    "score": 5,
+                    "comment": "excellent"
+                },
+                "15.02.2023": {
+                    "score": 4,
+                    "comment": "well done"
+                },
+                "16.02.2023": {
+                    "score": 3,
+                    "comment": "good effort"
+                },
+                "17.02.2023": {
+                    "score": 2,
+                    "comment": "need improvement"
+                },
+                "18.02.2023": {
+                    "score": 3,
+                    "comment": "good job"
+                },
+                "19.02.2023": {
+                    "score": 4,
+                    "comment": "keep it up"
+                },
+                "20.02.2023": {
+                    "score": 5,
+                    "comment": "excellent"
+                },
+                "21.02.2023": {
+                    "score": 4,
+                    "comment": "well done"
+                }
             }
         },
         {
@@ -22,16 +52,46 @@
             "ism": "Vali",
             "sinf": "10-A",
             "baholar": {
-                "12.02.2023": 4,
-                "13.02.2023": 5,
-                "14.02.2023": 4,
-                "15.02.2023": 3,
-                "16.02.2023": 2,
-                "17.02.2023": 1,
-                "18.02.2023": 2,
-                "19.02.2023": 3,
-                "20.02.2023": 4,
-                "21.02.2023": 5
+                "12.02.2023": {
+                    "score": 4,
+                    "comment": "good job"
+                },
+                "13.02.2023": {
+                    "score": 5,
+                    "comment": "keep it up"
+                },
+                "14.02.2023": {
+                    "score": 4,
+                    "comment": "excellent"
+                },
+                "15.02.2023": {
+                    "score": 3,
+                    "comment": "well done"
+                },
+                "16.02.2023": {
+                    "score": 2,
+                    "comment": "good effort"
+                },
+                "17.02.2023": {
+                    "score": 1,
+                    "comment": "need improvement"
+                },
+                "18.02.2023": {
+                    "score": 2,
+                    "comment": "good job"
+                },
+                "19.02.2023": {
+                    "score": 3,
+                    "comment": "keep it up"
+                },
+                "20.02.2023": {
+                    "score": 4,
+                    "comment": "excellent"
+                },
+                "21.02.2023": {
+                    "score": 5,
+                    "comment": "well done"
+                }
             }
         },
         {
@@ -39,16 +99,46 @@
             "ism": "Asl",
             "sinf": "10-A",
             "baholar": {
-                "12.02.2023": 5,
-                "13.02.2023": 4,
-                "14.02.2023": 3,
-                "15.02.2023": 2,
-                "16.02.2023": 1,
-                "17.02.2023": 0,
-                "18.02.2023": 1,
-                "19.02.2023": 2,
-                "20.02.2023": 3,
-                "21.02.2023": 4
+                "12.02.2023": {
+                    "score": 5,
+                    "comment": "good job"
+                },
+                "13.02.2023": {
+                    "score": 4,
+                    "comment": "keep it up"
+                },
+                "14.02.2023": {
+                    "score": 3,
+                    "comment": "excellent"
+                },
+                "15.02.2023": {
+                    "score": 2,
+                    "comment": "well done"
+                },
+                "16.02.2023": {
+                    "score": 1,
+                    "comment": "good effort"
+                },
+                "17.02.2023": {
+                    "score": 0,
+                    "comment": "need improvement"
+                },
+                "18.02.2023": {
+                    "score": 1,
+                    "comment": "good job"
+                },
+                "19.02.2023": {
+                    "score": 2,
+                    "comment": "keep it up"
+                },
+                "20.02.2023": {
+                    "score": 3,
+                    "comment": "excellent"
+                },
+                "21.02.2023": {
+                    "score": 4,
+                    "comment": "well done"
+                }
             }
         },
         {
@@ -56,16 +146,46 @@
             "ism": "Nodir",
             "sinf": "10-A",
             "baholar": {
-                "12.02.2023": 4,
-                "13.02.2023": 3,
-                "14.02.2023": 2,
-                "15.02.2023": 1,
-                "16.02.2023": 0,
-                "17.02.2023": 1,
-                "18.02.2023": 2,
-                "19.02.2023": 3,
-                "20.02.2023": 4,
-                "21.02.2023": 5
+                "12.02.2023": {
+                    "score": 4,
+                    "comment": "good job"
+                },
+                "13.02.2023": {
+                    "score": 3,
+                    "comment": "keep it up"
+                },
+                "14.02.2023": {
+                    "score": 2,
+                    "comment": "excellent"
+                },
+                "15.02.2023": {
+                    "score": 1,
+                    "comment": "well done"
+                },
+                "16.02.2023": {
+                    "score": 0,
+                    "comment": "good effort"
+                },
+                "17.02.2023": {
+                    "score": 1,
+                    "comment": "need improvement"
+                },
+                "18.02.2023": {
+                    "score": 2,
+                    "comment": "good job"
+                },
+                "19.02.2023": {
+                    "score": 3,
+                    "comment": "keep it up"
+                },
+                "20.02.2023": {
+                    "score": 4,
+                    "comment": "excellent"
+                },
+                "21.02.2023": {
+                    "score": 5,
+                    "comment": "well done"
+                }
             }
         },
         {
@@ -73,16 +193,46 @@
             "ism": "Davron",
             "sinf": "10-A",
             "baholar": {
-                "12.02.2023": 3,
-                "13.02.2023": 2,
-                "14.02.2023": 1,
-                "15.02.2023": 0,
-                "16.02.2023": 1,
-                "17.02.2023": 2,
-                "18.02.2023": 3,
-                "19.02.2023": 4,
-                "20.02.2023": 5,
-                "21.02.2023": 4
+                "12.02.2023": {
+                    "score": 3,
+                    "comment": "good job"
+                },
+                "13.02.2023": {
+                    "score": 2,
+                    "comment": "keep it up"
+                },
+                "14.02.2023": {
+                    "score": 1,
+                    "comment": "excellent"
+                },
+                "15.02.2023": {
+                    "score": 0,
+                    "comment": "well done"
+                },
+                "16.02.2023": {
+                    "score": 1,
+                    "comment": "good effort"
+                },
+                "17.02.2023": {
+                    "score": 2,
+                    "comment": "need improvement"
+                },
+                "18.02.2023": {
+                    "score": 3,
+                    "comment": "good job"
+                },
+                "19.02.2023": {
+                    "score": 4,
+                    "comment": "keep it up"
+                },
+                "20.02.2023": {
+                    "score": 5,
+                    "comment": "excellent"
+                },
+                "21.02.2023": {
+                    "score": 4,
+                    "comment": "well done"
+                }
             }
         },
         {
@@ -90,16 +240,46 @@
             "ism": "Sardor",
             "sinf": "10-A",
             "baholar": {
-                "12.02.2023": 2,
-                "13.02.2023": 1,
-                "14.02.2023": 0,
-                "15.02.2023": 1,
-                "16.02.2023": 2,
-                "17.02.2023": 3,
-                "18.02.2023": 4,
-                "19.02.2023": 5,
-                "20.02.2023": 4,
-                "21.02.2023": 3
+                "12.02.2023": {
+                    "score": 2,
+                    "comment": "good job"
+                },
+                "13.02.2023": {
+                    "score": 1,
+                    "comment": "keep it up"
+                },
+                "14.02.2023": {
+                    "score": 0,
+                    "comment": "excellent"
+                },
+                "15.02.2023": {
+                    "score": 1,
+                    "comment": "well done"
+                },
+                "16.02.2023": {
+                    "score": 2,
+                    "comment": "good effort"
+                },
+                "17.02.2023": {
+                    "score": 3,
+                    "comment": "need improvement"
+                },
+                "18.02.2023": {
+                    "score": 4,
+                    "comment": "good job"
+                },
+                "19.02.2023": {
+                    "score": 5,
+                    "comment": "keep it up"
+                },
+                "20.02.2023": {
+                    "score": 4,
+                    "comment": "excellent"
+                },
+                "21.02.2023": {
+                    "score": 3,
+                    "comment": "well done"
+                }
             }
         },
         {
@@ -107,16 +287,46 @@
             "ism": "Jasur",
             "sinf": "10-A",
             "baholar": {
-                "12.02.2023": 1,
-                "13.02.2023": 0,
-                "14.02.2023": 1,
-                "15.02.2023": 2,
-                "16.02.2023": 3,
-                "17.02.2023": 4,
-                "18.02.2023": 5,
-                "19.02.2023": 4,
-                "20.02.2023": 3,
-                "21.02.2023": 2
+                "12.02.2023": {
+                    "score": 1,
+                    "comment": "good job"
+                },
+                "13.02.2023": {
+                    "score": 0,
+                    "comment": "keep it up"
+                },
+                "14.02.2023": {
+                    "score": 1,
+                    "comment": "excellent"
+                },
+                "15.02.2023": {
+                    "score": 2,
+                    "comment": "well done"
+                },
+                "16.02.2023": {
+                    "score": 3,
+                    "comment": "good effort"
+                },
+                "17.02.2023": {
+                    "score": 4,
+                    "comment": "need improvement"
+                },
+                "18.02.2023": {
+                    "score": 5,
+                    "comment": "good job"
+                },
+                "19.02.2023": {
+                    "score": 4,
+                    "comment": "keep it up"
+                },
+                "20.02.2023": {
+                    "score": 3,
+                    "comment": "excellent"
+                },
+                "21.02.2023": {
+                    "score": 2,
+                    "comment": "well done"
+                }
             }
         },
         {
@@ -124,16 +334,46 @@
             "ism": "Farrux",
             "sinf": "10-A",
             "baholar": {
-                "12.02.2023": 0,
-                "13.02.2023": 1,
-                "14.02.2023": 2,
-                "15.02.2023": 3,
-                "16.02.2023": 4,
-                "17.02.2023": 5,
-                "18.02.2023": 4,
-                "19.02.2023": 3,
-                "20.02.2023": 2,
-                "21.02.2023": 1
+                "12.02.2023": {
+                    "score": 0,
+                    "comment": "good job"
+                },
+                "13.02.2023": {
+                    "score": 1,
+                    "comment": "keep it up"
+                },
+                "14.02.2023": {
+                    "score": 2,
+                    "comment": "excellent"
+                },
+                "15.02.2023": {
+                    "score": 3,
+                    "comment": "well done"
+                },
+                "16.02.2023": {
+                    "score": 4,
+                    "comment": "good effort"
+                },
+                "17.02.2023": {
+                    "score": 5,
+                    "comment": "need improvement"
+                },
+                "18.02.2023": {
+                    "score": 4,
+                    "comment": "good job"
+                },
+                "19.02.2023": {
+                    "score": 3,
+                    "comment": "keep it up"
+                },
+                "20.02.2023": {
+                    "score": 2,
+                    "comment": "excellent"
+                },
+                "21.02.2023": {
+                    "score": 1,
+                    "comment": "well done"
+                }
             }
         },
         {
@@ -141,16 +381,46 @@
             "ism": "Shahzod",
             "sinf": "10-A",
             "baholar": {
-                "12.02.2023": 1,
-                "13.02.2023": 2,
-                "14.02.2023": 3,
-                "15.02.2023": 4,
-                "16.02.2023": 5,
-                "17.02.2023": 4,
-                "18.02.2023": 3,
-                "19.02.2023": 2,
-                "20.02.2023": 1,
-                "21.02.2023": 0
+                "12.02.2023": {
+                    "score": 1,
+                    "comment": "good job"
+                },
+                "13.02.2023": {
+                    "score": 2,
+                    "comment": "keep it up"
+                },
+                "14.02.2023": {
+                    "score": 3,
+                    "comment": "excellent"
+                },
+                "15.02.2023": {
+                    "score": 4,
+                    "comment": "well done"
+                },
+                "16.02.2023": {
+                    "score": 5,
+                    "comment": "good effort"
+                },
+                "17.02.2023": {
+                    "score": 4,
+                    "comment": "need improvement"
+                },
+                "18.02.2023": {
+                    "score": 3,
+                    "comment": "good job"
+                },
+                "19.02.2023": {
+                    "score": 2,
+                    "comment": "keep it up"
+                },
+                "20.02.2023": {
+                    "score": 1,
+                    "comment": "excellent"
+                },
+                "21.02.2023": {
+                    "score": 0,
+                    "comment": "well done"
+                }
             }
         },
         {
@@ -158,16 +428,46 @@
             "ism": "Javohir",
             "sinf": "10-A",
             "baholar": {
-                "12.02.2023": 2,
-                "13.02.2023": 3,
-                "14.02.2023": 4,
-                "15.02.2023": 5,
-                "16.02.2023": 4,
-                "17.02.2023": 3,
-                "18.02.2023": 2,
-                "19.02.2023": 1,
-                "20.02.2023": 0,
-                "21.02.2023": 1
+                "12.02.2023": {
+                    "score": 2,
+                    "comment": "good job"
+                },
+                "13.02.2023": {
+                    "score": 3,
+                    "comment": "keep it up"
+                },
+                "14.02.2023": {
+                    "score": 4,
+                    "comment": "excellent"
+                },
+                "15.02.2023": {
+                    "score": 5,
+                    "comment": "well done"
+                },
+                "16.02.2023": {
+                    "score": 4,
+                    "comment": "good effort"
+                },
+                "17.02.2023": {
+                    "score": 3,
+                    "comment": "need improvement"
+                },
+                "18.02.2023": {
+                    "score": 2,
+                    "comment": "good job"
+                },
+                "19.02.2023": {
+                    "score": 1,
+                    "comment": "keep it up"
+                },
+                "20.02.2023": {
+                    "score": 0,
+                    "comment": "excellent"
+                },
+                "21.02.2023": {
+                    "score": 1,
+                    "comment": "well done"
+                }
             }
         }
     ]
