@@ -19,7 +19,7 @@ const Navbar = () => {
     };
     return (
         <nav className='flex justify-between items-center backdrop-blur-md bg-white/10 px-4 py-2 rounded-xl'>
-            <img src={logo14} alt="As logo" className='h-12 mr-2 ' />
+            <Link to='/'><img src={logo14} alt="As logo" className='h-12 mr-2 ' /></Link>
             <div className='text-white flex items-center gap-2'>
                 <h3 className='text-xl font-semibold'>
                     Tolipov <br /> Ziyovuddin
@@ -29,7 +29,7 @@ const Navbar = () => {
                         <img src={userimg} />
                     </div>
                     <Menu
-                        sx={{ mt: '70px',py:0}}
+                        sx={{ mt: '70px', py: 0 }}
                         id="menu-appbar"
                         anchorEl={anchorElUser}
                         anchorOrigin={{
@@ -46,8 +46,8 @@ const Navbar = () => {
                     >
                         {settings.map((setting) => (
                             <MenuItem key={setting} onClick={handleCloseUserMenu} >
-                                <Link to={'/'+setting}>
-                                <Typography textAlign="center">{setting}</Typography>
+                                <Link to={'/' + setting}>
+                                    <Typography textAlign="center">{setting}</Typography>
                                 </Link>
                             </MenuItem>
                         ))}

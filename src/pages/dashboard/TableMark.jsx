@@ -29,6 +29,7 @@ const OquvchilarJadvali = () => {
             <thead>
                 <tr>
                     <th className='px-6 py-1 font-medium  whitespace-nowrap text-white bg-slate-800 ' style={{ position: 'sticky', left: 0, zIndex: 1 }}>Ism Familiya</th>
+                    <th className='px-6 py-1 font-medium  whitespace-nowrap text-white bg-blue-800 cursor-pointer ' style={{ position: 'sticky', left: 120, zIndex: 1 }}>+</th>
                     {Object.keys(students.oquvchilar[0].baholar).map((sana, index) => (
                         <th className='text-center px-6 py-3' key={index}>{sana}</th>
                     ))}
@@ -38,6 +39,7 @@ const OquvchilarJadvali = () => {
                 {students.oquvchilar.map((oquvchi, index) => (
                     <tr className='border-b bg-gray-800 border-gray-700' key={index}>
                         <td className='px-6 py-1 bg-slate-800' style={{ position: 'sticky', left: 0, zIndex: 1 }}>{oquvchi.ism}</td>
+                        <td className='px-6 py-1 bg-blue-800 cursor-pointer' style={{ position: 'sticky', left: 120, zIndex: 1 }}>+</td>
                         {Object.values(oquvchi.baholar).map((allScore, index) => (
                             <td className={allScore.score >= 0 ? 'text-center' : 'text-center bg-red-900'} key={index}>{allScore.score >= 0 ? <Mark score={allScore.score} comment={allScore.comment}/> : "nb"}</td>
                         ))}
