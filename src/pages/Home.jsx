@@ -24,7 +24,7 @@ function Mark(props) {
             return 'btn-accent'
         }
     }
-    return <button className={`${style.buttons} ${returnColor(props)}`}/>
+    return <button className={`${style.buttons} ${returnColor(props)}`} />
 }
 import Navbar from '../components/Navbar'
 const Home = () => {
@@ -102,6 +102,15 @@ const Home = () => {
                                         11.02.2024
                                     </th>
                                     <th scope="col" className="px-6 py-3">
+                                        10.02.2024
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        09.02.2024
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        08.02.2024
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
                                         <span className="sr-only">taxrir</span>
                                     </th>
                                 </tr>
@@ -123,6 +132,15 @@ const Home = () => {
                                     <td className="px-6 py-1">
                                         <Mark score={2} />
                                     </td>
+                                    <td className="px-6 py-1">
+                                        <Mark score={3} />
+                                    </td>
+                                    <td className="px-6 py-1">
+                                        <Mark score={4} />
+                                    </td>
+                                    <td className="px-6 py-1">
+                                        <Mark score={4} />
+                                    </td>
                                     <td className="px-6 py-1 text-right">
                                         <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                     </td>
@@ -142,6 +160,15 @@ const Home = () => {
                                     <td className="px-6 py-1">
                                         <Mark score={4} />
                                     </td>
+                                    <td className="px-6 py-1">
+                                        <Mark score={1} />
+                                    </td>
+                                    <td className="px-6 py-1">
+                                        <Mark score={2} />
+                                    </td>
+                                    <td className="px-6 py-1">
+                                        <Mark score={3} />
+                                    </td>
                                     <td className="px-6 py-1 text-right">
                                         <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                     </td>
@@ -156,11 +183,21 @@ const Home = () => {
                                         </button>
                                     </td>
                                     <td className="px-6 py-1">
+                                        <Mark score={1} />
+                                    </td>
+                                    <td className="px-6 py-1">
+                                        <Mark score={2} />
+                                    </td>
+                                    <td className="px-6 py-1">
+                                        <Mark score={3} />
+                                    </td>
+                                    <td className="px-6 py-1">
                                         <Mark score={3} />
                                     </td>
                                     <td className="px-6 py-1">
                                         <Mark score={1} />
                                     </td>
+
                                     <td className="px-6 py-1 text-right">
                                         <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                     </td>
