@@ -25,10 +25,10 @@ function Mark(props) {
 
 const OquvchilarJadvali = () => {
     return (
-        <table className='table-students-mark text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 min-w-[100%] h-auto'>
+        <table className='table-students-mark  text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 min-w-[100%] h-auto'>
             <thead>
                 <tr>
-                    <th className='px-6 py-1 font-medium  whitespace-nowrap text-white'>Ism Familiya</th>
+                    <th className='px-6 py-1 font-medium  whitespace-nowrap text-white bg-slate-800 ' style={{ position: 'sticky', left: 0, zIndex: 1 }}>Ism Familiya</th>
                     {Object.keys(students.oquvchilar[0].baholar).map((sana, index) => (
                         <th className='text-center px-6 py-3' key={index}>{sana}</th>
                     ))}
@@ -37,9 +37,9 @@ const OquvchilarJadvali = () => {
             <tbody>
                 {students.oquvchilar.map((oquvchi, index) => (
                     <tr className='border-b bg-gray-800 border-gray-700' key={index}>
-                        <td className='px-6 py-1'>{oquvchi.ism}</td>
+                        <td className='px-6 py-1 bg-slate-800' style={{ position: 'sticky', left: 0, zIndex: 1 }}>{oquvchi.ism}</td>
                         {Object.values(oquvchi.baholar).map((score, index) => (
-                            <td className={score>=0 ? 'px-6 py-1 text-center':'px-6 py-1 text-center bg-red-900'} key={index}>{score>=0 ?  <Mark score={score} />:"nb"}</td>
+                            <td className={score >= 0 ? 'px-6 py-1 text-center' : 'px-6 py-1 text-center bg-red-900'} key={index}>{score >= 0 ? <Mark score={score} /> : "nb"}</td>
                         ))}
                     </tr>
                 ))}

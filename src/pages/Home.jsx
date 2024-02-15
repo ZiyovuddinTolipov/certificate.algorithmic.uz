@@ -65,7 +65,7 @@ const Home = () => {
                             </select>
                         </div>
                     </form>
-                    <div className='flex py-2'>
+                    <div className='flex py-2 overflow-x-scroll'>
                         <h1 className='hidden text-white text-4xl font-semibold text-center w-full mt-5'>Hozircha hech narsa!</h1>
                         <table className=" hidden text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 min-w-[100%] h-auto">
                             <caption className="py-5 px-0 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-transparent">
