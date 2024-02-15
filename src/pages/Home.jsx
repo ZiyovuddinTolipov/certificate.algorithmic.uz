@@ -3,7 +3,7 @@ import DialogNewDate from './dashboard/DialogNewDate'
 import { MdOutlineSchool } from "react-icons/md";
 import { IoIosDoneAll } from "react-icons/io";
 import DialogMark from './dashboard/DialogMark';
-// import TabeleMark from './dashboard/TableMark';
+import TabeleMark from './dashboard/TableMark';
 
 function Mark(props) {
     // console.log(typeof props.score)
@@ -67,7 +67,7 @@ const Home = () => {
                     </form>
                     <div className='flex py-2'>
                         <h1 className='hidden text-white text-4xl font-semibold text-center w-full mt-5'>Hozircha hech narsa!</h1>
-                        <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 min-w-[100%] h-auto">
+                        <table className=" hidden text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 min-w-[100%] h-auto">
                             <caption className="py-5 px-0 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-transparent">
                                 <div className='flex justify-between items-center my-2'>
                                     <h2 className='flex items-center gap-2'><span className='text-primary-500 flex items-center'>
@@ -204,7 +204,7 @@ const Home = () => {
                                 </tr>
                             </tbody>
                         </table>
-                        {/* <TabeleMark  /> */}
+                        <TabeleMark  />
                     </div>
                 </div>
             </div>

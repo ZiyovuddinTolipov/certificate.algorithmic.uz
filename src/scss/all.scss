@@ -14,3 +14,7 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+.table-students-mark ,tr,td,th  {
+    border-collapse: collapse;
+    border: 1px solid #cccccc73;
+}
