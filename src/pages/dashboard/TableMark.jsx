@@ -34,12 +34,12 @@ const OquvchilarJadvali = () => {
                         <th className='text-center px-6 py-3' key={index}>{sana}</th>
                     ))}
                 </tr>
-            </thead>
+            </thead> 
             <tbody>
                 {students.oquvchilar.map((oquvchi, index) => (
                     <tr className='border-b bg-gray-800 border-gray-700' key={index}>
                         <td className='px-6 py-1 bg-slate-800' style={{ position: 'sticky', left: 0, zIndex: 1 }}>{oquvchi.ism}</td>
-                        <td className='px-6 py-1 bg-blue-800 cursor-pointer' style={{ position: 'sticky', left: 120, zIndex: 1 }}>+</td>
+                        <td className='px-6 py-1 bg-blue-800 cursor-pointer font-bold text-xl text-white' style={{ position: 'sticky', left: 120, zIndex: 1 }}>+</td>
                         {Object.values(oquvchi.baholar).map((allScore, index) => (
                             <td className={allScore.score >= 0 ? 'text-center' : 'text-center bg-red-900'} key={index}>{allScore.score >= 0 ? <Mark score={allScore.score} comment={allScore.comment}/> : "nb"}</td>
                         ))}
