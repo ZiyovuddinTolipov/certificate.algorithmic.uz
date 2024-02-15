@@ -14,7 +14,30 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
-.table-students-mark ,tr,td,th  {
+.table-students-mark,
+tr,
+td,
+th {
     border-collapse: collapse;
     border: 1px solid #cccccc73;
+}
+.table-scroll {
+    overflow-x: scroll;
+}
+.table-scroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(29, 3, 143, 0.603);
+	background-color: #000000;
+}
+
+.table-scroll::-webkit-scrollbar
+{
+	height: 10px;
+	background-color: #0c0909;
+}
+
+.table-scroll::-webkit-scrollbar-thumb
+{
+	background-color: #3804f5;
+	border: 2px solid #020a55;
 }
