@@ -8,7 +8,7 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(`https://bkscoring.algorithmic.uz/api/Auth?userName=${username}&password=${password}`)
+        // console.log(`https://bkscoring.algorithmic.uz/api/Auth?userName=${username}&password=${password}`)
         try {
             const response = await axios.post(`https://bkscoring.algorithmic.uz/api/Auth?userName=${username}&password=${password}`, {
                 headers: {},
