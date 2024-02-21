@@ -54,7 +54,7 @@ function Dialog(props) {
                         <div className="label">
                             <span className="label-text">Dars mavzusi</span>
                         </div>
-                        <textarea placeholder="Bio" className="textarea textarea-bordered textarea-xs w-full max-w-[100%]" ></textarea>
+                        <textarea placeholder="JavaScript Top" className="textarea textarea-bordered textarea-xs w-full max-w-[100%]" ></textarea>
                     </label>
                     <button className='btn btn-active btn-primary' onClick={saveDate}>QO'SHISH</button>
                 </form>
