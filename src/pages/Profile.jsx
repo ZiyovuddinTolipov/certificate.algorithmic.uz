@@ -1,7 +1,8 @@
 import avatar from '../assets/tolipovblack.png'
 import Navbar from '../components/Navbar'
+
 const Profile = () => {
-    
+   
     return (
         <main className='bg-gray-50 dark:bg-gray-900'>
             <div className="flex flex-col px-6 py-8 mx-auto  p-4 max-w-[1400px] w-full">
