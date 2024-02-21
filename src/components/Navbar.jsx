@@ -40,7 +40,7 @@ const Navbar = () => {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
-    // console.log(JSON.parse(userData));
+    console.log(userData);
     // console.log(typeof JSON.parse(userData));
     return (
         <nav className='flex justify-between items-center backdrop-blur-md bg-white/10 px-4 py-2 rounded-xl'>
