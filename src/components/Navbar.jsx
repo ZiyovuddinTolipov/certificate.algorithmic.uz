@@ -47,7 +47,7 @@ const Navbar = () => {
             <Link to='/'><img src={logo14} alt="As logo" className='h-12 mr-2 ' /></Link>
             <div className='text-white flex items-center gap-2'>
                 <h3 className='text-xl font-semibold'>
-                    {userData.fullName ? userData.fullName:"Tolipov Ziyovuddin" }
+                    {userData.fullName ? userData.fullName : <>Tolipov <br /> Ziyovuddin </>}
                     {/* Tolipov <br /> Ziyovuddin */}
                 </h3>
                 <div className="avatar online">

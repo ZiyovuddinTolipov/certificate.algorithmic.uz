@@ -31,23 +31,44 @@ function Dialog() {
     }
 
     return (
-        <dialog id="addMark" className="modal">
+        <dialog id="addAttendance" className="modal">
             <div className="modal-box">
                 <form method="dialog">
                     {/* if there is a button in form, it will close the modal */}
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
                 {/* <h3 className="font-bold text-lg">{props.data.fullName}</h3> */}
-                <h3 className='my-3'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, neque.</h3>
-                <div className='flex gap-2 '>
-                    <button className="btn">Button</button>
-                    <button className="btn btn-neutral">Neutral</button>
-                    <button className="btn btn-primary">Primary</button>
-                    <button className="btn btn-secondary">Secondary</button>
-                    <button className="btn btn-accent">Accent</button>
+                <h3 className='my-3'>Keling o'quvchilarni baholaymiz ?</h3>
+                <div className='flex gap-2 flex-col '>
+                    <div className='flex gap-2 hidden'>
+                        <button className="btn">Button</button>
+                        <button className="btn btn-neutral">Neutral</button>
+                        <button className="btn btn-primary">Primary</button>
+                        <button className="btn btn-secondary">Secondary</button>
+                        <button className="btn btn-accent">Accent</button>
+                    </div>
+                    <div className='flex gap-2'>
+                        <h2>Baholash</h2>
+                    <input type="radio" name="radio-10" className="radio checked:bg-red-500 radio-error" checked />
+                    <input type="radio" name="radio-10" className="radio checked:bg-white radio-mark" checked />
+                    <input type="radio" name="radio-10" className="radio checked:bg-indigo-500 radio-primary" checked />
+                    <input type="radio" name="radio-10" className="radio checked:bg-teal-500 radio-accent" checked />
+                    <input type="radio" name="radio-10" className="radio checked:bg-yellow-500 radio-warning" checked />
+                    <input type="radio" name="radio-10" className="radio checked:bg-sky-500 radio-info" checked />
+                    </div>
+                    <label className="form-control max-w-[100%] m-1">
+                        <div className="label">
+                            <span className="label-text">Nega bunday baho qo'ydingiz ?</span>
+                        </div>
+                        <input
+                            type="text"
+                            className='input input-bordered input-primary w-full max-w-[100%]'
+                        />
+                    </label>
+                    <button className='btn btn-active btn-info' >QO'SHISH</button>
                 </div>
             </div>
-        </dialog>
+        </dialog >
     )
 }
 
