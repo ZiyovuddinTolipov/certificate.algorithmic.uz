@@ -39,3 +39,18 @@
     "vite": "^4.4.5"
   }
 }
+[
+  {
+    "id": "bc387244-4a2c-416e-939c-be9b96b50884",
+    "name": "Algorithmic School"
+  },
+  {
+    "id": "bc387244-4a2c-416e-939c-be9b96b50823",
+    "name": "Vector School"
+  },
+  {
+    "id": "bc387244-4a2c-416e-939c-be9b96b50823",
+    "name": "Cambridge School"
+  }
+]
+]

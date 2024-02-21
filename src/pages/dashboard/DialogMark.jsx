@@ -40,14 +40,14 @@ function Dialog() {
                 {/* <h3 className="font-bold text-lg">{props.data.fullName}</h3> */}
                 <h3 className='my-3'>Keling o'quvchilarni baholaymiz ?</h3>
                 <div className='flex gap-2 flex-col '>
-                    <div className='flex gap-2 hidden'>
+                    <div className='flex gap-2 '>
                         <button className="btn">Button</button>
                         <button className="btn btn-neutral">Neutral</button>
                         <button className="btn btn-primary">Primary</button>
                         <button className="btn btn-secondary">Secondary</button>
                         <button className="btn btn-accent">Accent</button>
                     </div>
-                    <div className='flex gap-2'>
+                    <div className='flex gap-2 hidden'>
                         <h2>Baholash</h2>
                     <input type="radio" name="radio-10" className="radio checked:bg-red-500 radio-error" checked />
                     <input type="radio" name="radio-10" className="radio checked:bg-white radio-mark" checked />

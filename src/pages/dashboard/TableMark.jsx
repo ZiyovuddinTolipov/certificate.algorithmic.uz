@@ -88,3 +88,4 @@ const OquvchilarJadvali = () => {
 };
 
 export default OquvchilarJadvali;
+

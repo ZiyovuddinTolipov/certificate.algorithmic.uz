@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 const settings = ['profile', 'account', 'dashboard', 'logout'];
 
 const Navbar = () => {
+    const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [userData, setUserData] = useState({});
     const getToken = () => {
         return localStorage.getItem('user_jwt');
@@ -33,15 +34,13 @@ const Navbar = () => {
         fetchData();
     }, []);
     // const userData = localStorage.getItem('user_data');
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
     };
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
-    console.log(userData);
-    // console.log(typeof JSON.parse(userData));
+    // console.log(userData);
     return (
         <nav className='flex justify-between items-center backdrop-blur-md bg-white/10 px-4 py-2 rounded-xl'>
             <Link to='/'><img src={logo14} alt="As logo" className='h-12 mr-2 ' /></Link>
