@@ -37,7 +37,7 @@ const OquvchilarJadvali = () => {
     // const addMark = (id) => {
     //     document.getElementById(id).showModal()
     const sty = {
-        th1: "px-6 py-1 font-medium  whitespace-nowrap text-white bg-slate-800"
+        th1: "px-6 py-1 font-medium  whitespace-nowrap text-white bg-black"
     }
     return (
         <table className='table-students-mark  text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 min-w-[100%] h-auto'>
@@ -65,8 +65,8 @@ const OquvchilarJadvali = () => {
             <tbody>
                 {students.oquvchilar.map((oquvchi, index) => (
                     <tr className='border-b bg-gray-800 border-gray-700' key={index}>
-                        <td className='px-6 py-1 bg-slate-800'>{index + 1}</td>
-                        <td className='px-6 py-1 bg-slate-800' style={{ position: 'sticky', left: 0, zIndex: 1 }}>{oquvchi.ism}</td>
+                        <td className='px-6 py-1 bg-black text-white'>{index + 1}</td>
+                        <td className='px-6 py-1 bg-black text-white' style={{ position: 'sticky', left: 0, zIndex: 1 }}>{oquvchi.ism}</td>
                         <td
                             className='px-6 py-1 bg-blue-800 cursor-pointer font-bold text-xl text-white'
                             style={{ position: 'sticky', left: 120, zIndex: 1 }}

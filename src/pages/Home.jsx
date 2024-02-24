@@ -41,10 +41,10 @@ const Home = () => {
         }
     ];
     return (
-        <main className='bg-gray-900 '>
+        <main className='bg-gray-900 home-page2'>
             <div className="flex flex-col px-6 py-8 mx-auto  p-4 max-w-[1400px] w-full h-100">
                 <Navbar />
-                <div className='backdrop-blur-md bg-white/10 my-2 rounded-xl min-h-[400px] h-auto px-4 py-2'>
+                <div className='backdrop-blur-md bg-white/20 my-2 rounded-xl min-h-[400px] h-auto px-4 py-2'>
                     <form className='flex gap-3 border-b-[1px] border-b-gray-900'>
                         <div>
                             <label htmlFor="default" className={sty.label}>Maktabni tanlash</label>
