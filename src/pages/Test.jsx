@@ -1,29 +1,55 @@
-import students from '../data/students.json';
-const OquvchilarJadvali = () => {
-    return (
-        <div style={{ overflowX: 'auto' }}>
-            <table>
-                <thead>
-                    <tr>
-                        <th style={{ position: 'sticky', left: 0, zIndex: 1 }} className='w-[400px]'>Ism Familiya</th>
-                        {Object.keys(students.oquvchilar[0].baholar).map((sana, index) => (
-                            <th key={index}>{sana}</th>
-                        ))}
-                    </tr>
-                </thead>
-                <tbody>
-                    {students.oquvchilar.map((oquvchi, index) => (
-                        <tr key={index} >
-                            <td style={{ position: 'sticky', left: 0, zIndex: 1 }}>{oquvchi.ism}</td>
-                            {Object.values(oquvchi.baholar).map((bahol, index) => (
-                                <td key={index} className='w-[400px]'>{bahol}</td>
-                            ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-    );
-};
+// import React, { useEffect, useState } from 'react';
+// import { fetchUserData, updateUserProfile } from './apiService';
 
-export default OquvchilarJadvali;
+// const UserProfile = ({ userId }) => {
+//     const [userData, setUserData] = useState(null);
+
+//     useEffect(() => {
+//         const fetchData = async () => {
+//             try {
+//                 const data = await fetchUserData(userId);
+//                 setUserData(data);
+//             } catch (error) {
+//                 console.error('Error fetching user data:', error);
+//             }
+//         };
+
+//         fetchData();
+//     }, [userId]);
+
+//     const handleUpdateProfile = async (updatedData) => {
+//         try {
+//             const updatedUserData = await updateUserProfile(userId, updatedData);
+//             setUserData(updatedUserData);
+//         } catch (error) {
+//             console.error('Error updating user profile:', error);
+//         }
+//     };
+
+//     return (
+//         <div>
+//             {userData ? (
+//                 <div>
+//                     <h2>{userData.name}</h2>
+//                     <p>{userData.email}</p>
+//                     <button onClick={() => handleUpdateProfile({ name: 'New Name' })}>
+//                         Update Profile
+//                     </button>
+//                 </div>
+//             ) : (
+//                 <p>Loading...</p>
+//             )}
+//         </div>
+//     );
+// };
+
+// export default UserProfile;
+import React from 'react'
+
+const Test = () => {
+  return (
+    <div>Test</div>
+  )
+}
+
+export default Test

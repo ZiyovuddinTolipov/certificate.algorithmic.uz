@@ -1,7 +1,7 @@
 import logo14 from "../assets/logo14.png"
 import { useState } from 'react';
-import axios from 'axios';
 import { Link } from "react-router-dom";
+import { getLogin } from '../apis/apiService'
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -9,20 +9,15 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // console.log(`https://bkscoring.algorithmic.uz/api/Auth?userName=${username}&password=${password}`)
-        try {
-            const response = await axios.post(`https://bkscoring.algorithmic.uz/api/Auth?userName=${username}&password=${password}`, {
-                headers: {},
-                body: JSON.stringify({}),
-            });
-            localStorage.setItem("user_jwt", response.data)
-            // console.log(response.data);
-            // console.log(response);
-        } catch (error) {
-            console.error('Error:', error);
-        }
+        const fetchData = async () => {
+            try {
+                const data = await getLogin(username, password);
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        };
+        fetchData();
     };
-
     return (
         <section className="bg-gray-50 dark:bg-gray-900 home-page">
             <div className="flex h-screen flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
