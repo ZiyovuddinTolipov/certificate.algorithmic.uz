@@ -5,9 +5,6 @@ import DialogMark from './DialogMark'
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 
-
-
-
 function Mark(props) {
     // console.log(typeof props.score)
     const style = {
@@ -43,7 +40,6 @@ const OquvchilarJadvali = () => {
         <table className='table-students-mark  text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 min-w-[100%] h-auto'>
             <thead>
                 <tr>
-
                     <th className={sty.th1} >NO</th>
                     <th className={sty.th1} style={{ position: 'sticky', left: 0, zIndex: 1 }}>Ism Familiya</th>
                     <th
@@ -52,9 +48,7 @@ const OquvchilarJadvali = () => {
                         onClick={() => addMark('addColumn')}>
                         <span>+</span>
                         <DialogNewDate />
-
                     </th>
-
                     {Object.keys(students.oquvchilar[0].baholar).map((sana, index) => (
                         <th className='text-center px-6 py-3 text-white' key={index} >{sana}
                             {/* <DialogNewDate /> */}

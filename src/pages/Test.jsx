@@ -1,55 +1,65 @@
-// import React, { useEffect, useState } from 'react';
-// import { fetchUserData, updateUserProfile } from './apiService';
+import React, { useState, useEffect } from 'react';
+import { fetchSchools, fetchClassesBySchoolId } from '../apis/apiService';
 
-// const UserProfile = ({ userId }) => {
-//     const [userData, setUserData] = useState(null);
+function App() {
+  const [schools, setSchools] = useState([]);
+  const [selectedSchoolId, setSelectedSchoolId] = useState('');
+  const [classes, setClasses] = useState([]);
+  const [selectedClassId, setSelectedClassId] = useState('');
+  const [isSchoolSelected, setIsSchoolSelected] = useState(false);
 
-//     useEffect(() => {
-//         const fetchData = async () => {
-//             try {
-//                 const data = await fetchUserData(userId);
-//                 setUserData(data);
-//             } catch (error) {
-//                 console.error('Error fetching user data:', error);
-//             }
-//         };
+  useEffect(() => {
+    fetchSchools().then((data) => setSchools(data));
+  }, []);
 
-//         fetchData();
-//     }, [userId]);
+  const handleSchoolChange = (event) => {
+    setSelectedSchoolId(event.target.value);
+    setIsSchoolSelected(true);
+    fetchClassesBySchoolId(event.target.value).then((data) => setClasses(data));
+  };
 
-//     const handleUpdateProfile = async (updatedData) => {
-//         try {
-//             const updatedUserData = await updateUserProfile(userId, updatedData);
-//             setUserData(updatedUserData);
-//         } catch (error) {
-//             console.error('Error updating user profile:', error);
-//         }
-//     };
+  const handleClassChange = (event) => {
+    setSelectedClassId(event.target.value);
+  };
 
-//     return (
-//         <div>
-//             {userData ? (
-//                 <div>
-//                     <h2>{userData.name}</h2>
-//                     <p>{userData.email}</p>
-//                     <button onClick={() => handleUpdateProfile({ name: 'New Name' })}>
-//                         Update Profile
-//                     </button>
-//                 </div>
-//             ) : (
-//                 <p>Loading...</p>
-//             )}
-//         </div>
-//     );
-// };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`Maktab ID: ${selectedSchoolId}, Sinf ID: ${selectedClassId}`);
+  };
 
-// export default UserProfile;
-import React from 'react'
-
-const Test = () => {
   return (
-    <div>Test</div>
-  )
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label>
+          Maktabni tanlang:
+          <select value={selectedSchoolId} onChange={handleSchoolChange}>
+            <option value="">Maktabni tanlang</option>
+            {schools.map((school) => (
+              <option key={school.id} value={school.id}>
+                {school.name}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+      {isSchoolSelected && (
+        <div>
+          <label>
+            Sinfni tanlang:
+            <select value={selectedClassId} onChange={handleClassChange}>
+              <option value="">Sinfni tanlang</option>
+              {classes.map((school) => (
+              <option key={school.id} value={school.id}>
+                {school.name}
+              </option>
+            ))}
+            </select>
+          </label>
+        </div>
+      )}
+      <button type="submit">Yuborish</button>
+    </form>
+  );
 }
 
-export default Test
+export default App;
