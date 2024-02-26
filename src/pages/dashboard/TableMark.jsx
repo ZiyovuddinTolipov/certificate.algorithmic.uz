@@ -3,7 +3,6 @@ import students from '../../data/students.json';
 import DialogNewDate from './DialogNewDate'
 import DialogMark from './DialogMark'
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from 'react';
 
 function Mark(props) {
     // console.log(typeof props.score)
@@ -80,7 +79,7 @@ function StudentList (props) {
             </tbody>
         </table >
     );
-};
+}
 
 export default StudentList;
 

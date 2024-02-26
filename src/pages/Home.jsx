@@ -2,8 +2,8 @@
 import TabeleMark from './dashboard/TableMark';
 import Navbar from '../components/Navbar';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { updateUserProfile, fetchSchools, fetchClassesBySchoolId } from '../apis/apiService'
+import {  fetchSchools, fetchClassesBySchoolId } from '../apis/apiService'
+
 const Home = () => {
     const sty = {
         select: "bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
@@ -29,11 +29,6 @@ const Home = () => {
     const handleClassChange = (event) => {
         setSelectedClassId(event.target.value);
         setIsClassSelected(true);
-    };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        alert(`Maktab ID: ${selectedSchoolId}, Sinf ID: ${selectedClassId}`);
     };
 
     // console.log(schoolsList);
