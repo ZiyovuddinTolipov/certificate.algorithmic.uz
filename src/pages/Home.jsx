@@ -14,6 +14,7 @@ const Home = () => {
     const [classes, setClasses] = useState([]);
     const [selectedClassId, setSelectedClassId] = useState('');
     const [isSchoolSelected, setIsSchoolSelected] = useState(false);
+    const [isClassSelected, setIsClassSelected] = useState(false);
 
     useEffect(() => {
         fetchSchools().then((data) => setSchools(data));
@@ -67,9 +68,12 @@ const Home = () => {
                             </div>
                         )}
                     </form>
-                    <div className='flex py-2 table-scroll'>
-                        <h1 className='hidden text-white text-4xl font-semibold text-center w-full mt-5'>Hozircha hech narsa!</h1>
-                        <TabeleMark />
+                    <div  className={`flex py-2 ${isClassSelected?"table-scroll":""}`}>
+                        {
+                            isClassSelected ?
+                                <TabeleMark school={selectedSchoolId} class={selectedClassId}/> :
+                                <h1 className='text-white text-4xl font-semibold text-center w-full mt-5'>Hozircha hech narsa!</h1>
+                        }
                     </div>
                 </div>
             </div >

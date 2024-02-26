@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 
-function Dialog() {
+function Dialog(props) {
     const [date, setDate] = useState('');
     const [savedDate, setSavedDate] = useState('');
 
@@ -56,6 +56,8 @@ function Dialog() {
                     <input type="radio" name="radio-10" className="radio checked:bg-yellow-500 radio-warning" checked />
                     <input type="radio" name="radio-10" className="radio checked:bg-sky-500 radio-info" checked />
                     </div>
+                    <p className='text-base'>maktab : {props.school} </p>
+                    <p className='text-base'>sinf : {props.class} </p>
                     <label className="form-control max-w-[100%] m-1">
                         <div className="label">
                             <span className="label-text">Nega bunday baho qo'ydingiz ?</span>

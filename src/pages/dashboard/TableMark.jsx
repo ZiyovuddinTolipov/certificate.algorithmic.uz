@@ -27,7 +27,7 @@ function Mark(props) {
     return <button className={`${style.buttons} ${returnColor(props)}`} >{props.comment}</button>
 }
 
-const OquvchilarJadvali = () => {
+function StudentList (props) {
     const addMark = (id) => {
         document.getElementById(id).showModal()
     }
@@ -52,6 +52,7 @@ const OquvchilarJadvali = () => {
                     {Object.keys(students.oquvchilar[0].baholar).map((sana, index) => (
                         <th className='text-center px-6 py-3 text-white' key={index} >{sana}
                             {/* <DialogNewDate /> */}
+                            {props.schoolId}
                         </th>
                     ))}
                 </tr>
@@ -67,7 +68,7 @@ const OquvchilarJadvali = () => {
                             onClick={() => addMark('addAttendance')}
                         >
                             <span>+</span>
-                            <DialogMark />
+                            <DialogMark school={props.school} class={props.class}/>
                         </td>
                         {
                             Object.values(oquvchi.baholar).map((allScore, index) => (
@@ -81,5 +82,5 @@ const OquvchilarJadvali = () => {
     );
 };
 
-export default OquvchilarJadvali;
+export default StudentList;
 
