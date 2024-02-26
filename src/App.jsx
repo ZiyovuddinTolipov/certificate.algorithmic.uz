@@ -23,7 +23,7 @@ function App() {
 
   return (
 
-    <main>
+    <main className='bg-[#020817] h-full'>
       <ToastContainer
         position="top-right"
         autoClose={5000}

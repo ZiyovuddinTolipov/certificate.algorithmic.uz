@@ -8,7 +8,8 @@ export const getLogin = async (username, password) => {
     try {
         const response = await axios.post(
             `${BASE_URL}/Auth?userName=${username}&password=${password}`);
-        localStorage.setItem("user_jwt", response.data);
+            localStorage.setItem("user_jwt", response.data);
+            location.href='/'
     } catch (error) {
         console.error("Error:", error);
     }
