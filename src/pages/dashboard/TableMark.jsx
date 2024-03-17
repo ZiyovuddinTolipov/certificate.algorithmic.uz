@@ -2,6 +2,9 @@
 import students from '../../data/students.json';
 import DialogNewDate from './DialogNewDate'
 import DialogMark from './DialogMark'
+import { useEffect } from 'react';
+import {toast} from 'react-hot-toast'
+import { getStudentsByClass } from '../../apis/apiService';
 /* eslint-disable react/prop-types */
 
 function Mark(props) {
@@ -30,6 +33,19 @@ function StudentList (props) {
     const addMark = (id) => {
         document.getElementById(id).showModal()
     }
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await getStudentsByClass(props.class);
+                // res.data? toast.success('Login successful!'):toast.error("Xatolik");
+                console.log(res.data)
+            } catch (error) {
+                toast.error("Failed to"+error);
+                console.error('Error fetching user data:', error);
+            }
+        };
+        fetchData();
+    }, []);
     // const addMark = (id) => {
     //     document.getElementById(id).showModal()
     const sty = {

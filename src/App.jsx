@@ -8,7 +8,7 @@ import Test from './pages/Test';
 import Resetpassword from './pages/ResetPassword'
 import Profile from './pages/Profile'
 
-import { ToastContainer } from "react-toastify"
+import { Toaster } from "react-hot-toast"
 function App() {
   const routes = useRoutes([
     { path: '/', element: <HomePage /> },
@@ -17,31 +17,15 @@ function App() {
     { path: '/reset', element: <Resetpassword /> },
     { path: '/profile', element: <Profile /> },
     { path: '*', element: <NotFound /> }
-
   ]);
 
-
   return (
-
     <main className='bg-[#020817] h-full'>
-      <ToastContainer
+      <Toaster
         position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
+        reverseOrder={false}
       />
-      {/* Same as */}
-      <ToastContainer />
-
-      {/* <Navbar /> */}
       {routes}
-      {/* <Footer /> */}
     </main>
   );
 }

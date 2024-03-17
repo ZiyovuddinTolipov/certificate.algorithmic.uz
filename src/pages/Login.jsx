@@ -2,7 +2,7 @@ import logo14 from "../assets/logo14.png"
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import { getLogin } from '../apis/apiService'
-
+import {toast} from 'react-hot-toast'
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -11,8 +11,13 @@ const Login = () => {
         e.preventDefault();
         const fetchData = async () => {
             try {
-                const data = await getLogin(username, password);
+                const res = await getLogin(username, password);
+                res.data? toast.success('Login successful!'):toast.error("Xatolik");
+                console.log(res.data)
+                localStorage.setItem("user_jwt", res.data);
+                location.href = '/'
             } catch (error) {
+                toast.error("Failed to"+error);
                 console.error('Error fetching user data:', error);
             }
         };
@@ -36,14 +41,6 @@ const Login = () => {
                                 <input type="password" className="grow bg-transparent" minLength={5} placeholder="parol" value={password} onChange={(e) => setPassword(e.target.value)} />
                             </label>
                             <div className="flex items-center justify-between">
-                                <div className="flex items-start">
-                                    <div className="flex items-center h-5">
-                                        <input id="remember" aria-describedby="remember" type="checkbox" className="checkbox checkbox-primary h-5 w-5" required />
-                                    </div>
-                                    <div className="ml-3 text-sm">
-                                        <label htmlFor="remember" className="text-gray-500 dark:text-gray-300">Tasdiqlash</label>
-                                    </div>
-                                </div>
                                 <Link to="/register" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Hisob yaratish?</Link>
                             </div>
                             <button type="submit" className="btn btn-active btn-primary w-full">Yuborish</button>

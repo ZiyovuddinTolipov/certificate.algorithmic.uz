@@ -2,14 +2,14 @@
 
 import axios from "axios";
 
-const BASE_URL = "https://f622-89-236-230-127.ngrok-free.app/api";
+const BASE_URL = "https://bkscoring.algorithmic.uz/api";
 
 export const getLogin = async (username, password) => {
     try {
+        console.log(`${BASE_URL}/Auth?userName=${username}&password=${password}`)
         const response = await axios.post(
             `${BASE_URL}/Auth?userName=${username}&password=${password}`);
-            localStorage.setItem("user_jwt", response.data);
-            location.href='/'
+            return response;
     } catch (error) {
         console.error("Error:", error);
     }
@@ -74,6 +74,21 @@ export const fetchClassesBySchoolId = async (schoolId) => {
             },
         });
         return response.data;
+    } catch (error) {
+        console.error('Error fetching classes:', error);
+        throw error;
+    }
+};
+
+export const getStudentsByClass = async (classID) => {
+    try {
+        console.log(`${BASE_URL}/Students/GetByGrade/${classID}`)
+        const response = await axios.get(`${BASE_URL}/Students/GetByGrade/${classID}`, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('user_jwt')}`,
+            },
+        });
+        return response;
     } catch (error) {
         console.error('Error fetching classes:', error);
         throw error;
