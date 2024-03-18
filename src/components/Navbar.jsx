@@ -43,7 +43,7 @@ const Navbar = () => {
     // console.log(userData);
     return (
         <nav className='flex justify-between items-center backdrop-blur-md bg-white/10 px-4 py-2 rounded-xl'>
-            <Link to='/'><img src={logo14} alt="As logo" className='h-12 mr-2 ' /></Link>
+            <Link to='/'><img src={logo14} alt="As logo" className='h-12 mr-2 ' loading="lazy"/></Link>
             <div className='text-white flex items-center gap-2'>
                 <h3 className='text-xl font-semibold'>
                     {userData.fullName ? userData.fullName : <>Tolipov <br /> Ziyovuddin </>}
@@ -51,7 +51,7 @@ const Navbar = () => {
                 </h3>
                 <div className="avatar online">
                     <div className="w-16 mask rounded-full" onClick={handleOpenUserMenu}>
-                        <img src={userData.imageId ? `https://bkscoring.algorithmic.uz/api/Files/${userData.imageId}` : userimg} />
+                        <img src={userData.imageId ? `https://bkscoring.algorithmic.uz/api/Files/${userData.imageId}` : userimg} loading="lazy" />
                     </div>
                     <Menu
                         sx={{ mt: '70px', py: 0 }}

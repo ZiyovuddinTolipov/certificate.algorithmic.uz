@@ -9,7 +9,7 @@ const Profile = () => {
                 <Navbar />
                 <div className='backdrop-blur-md bg-white/10 my-2 rounded-xl min-h-[400px] h-auto px-4 py-2 flex'>
                     <div className='w-1/3 flex justify-center items-center h-100'>
-                        <img src={avatar} alt="user img" height='300px' className='h-60 w-auto' />
+                        <img src={avatar} alt="user img" height='300px' className='h-60 w-auto' loading="lazy"/>
                     </div>
                     <div className='w-1/3 flex gap-2 flex-col justify-center items-start h-100'>
                         <div className='flex flex-col gap-2'>
