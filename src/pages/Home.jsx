@@ -58,7 +58,7 @@ const Home = () => {
             <div className="flex flex-col px-6 py-8 mx-auto  p-4 max-w-[1400px] w-full h-auto">
                 <Navbar />
                 <div className='backdrop-blur-xl bg-black/10 my-2 rounded-xl min-h-[400px] h-auto px-4 py-2'>
-                    <form className='flex gap-3 border-b-[1px] border-b-gray-900' >
+                    <form className='flex gap-3 border-b-[1px] border-b-gray-900 relative' >
                         <div>
                             <label htmlFor="school" className={sty.label}>Maktabni tanlash</label>
                             <select id="school" value={selectedSchoolId} onChange={handleSchoolChange} className={sty.select} >
@@ -75,7 +75,7 @@ const Home = () => {
                             <div>
                                 <label htmlFor="default" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sinfni tanlash</label>
                                 <select value={selectedClassId} onChange={handleClassChange} className={sty.select}>
-                                    <option selected={true} aria-selected hidden>Sinfni tanlang</option>
+                                    <option selected={true} aria-selected   >Sinfni tanlang</option>
                                     {classes.map((grade) => (
                                         <option key={grade.id} value={grade.id}>
                                                 {grade.name}
@@ -84,6 +84,9 @@ const Home = () => {
                                 </select>
                             </div>
                         )}
+                    <div className='absolute right-0 top-[30%] btn btn-info'>
+                        O'quvchi qo'shish
+                    </div>
                     </form>
                     <div className={`flex py-2 ${isClassSelected ? "table-scroll" : ""}`}>
                         {
