@@ -80,10 +80,10 @@ export const fetchClassesBySchoolId = async (schoolId) => {
     }
 };
 
-export const getStudentsByClass = async (classID) => {
+export const getStudentsByClass = async (grade_id) => {
     try {
-        console.log(`${BASE_URL}/Students/GetByGrade/${classID}`)
-        const response = await axios.get(`${BASE_URL}/Students/GetByGrade/${classID}`, {
+        console.log(`${BASE_URL}/Students/GetByGrade/${grade_id}`)
+        const response = await axios.get(`${BASE_URL}/Students/GetByGrade/${grade_id}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('user_jwt')}`,
             },

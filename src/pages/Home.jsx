@@ -8,6 +8,7 @@ import { useNavigate, useSearchParams  } from "react-router-dom";
 const Home = () => {
     const [schoolId, setSchoolId] = useState('')
     const [searchParams] = useSearchParams();
+
     const navigate = useNavigate();
 
     const sty = {
@@ -33,7 +34,7 @@ const Home = () => {
         }
         fetchSchools().then((data) => setSchools(data));
     }, []);
-
+    
     const handleSchoolChange = (event) => {
         setSelectedSchoolId(event.target.value);
         setSchoolId(event.target.value);
@@ -45,12 +46,12 @@ const Home = () => {
 
     const handleClassChange = (event) => {
         setSelectedClassId(event.target.value);
-        searchParams.get('school_id')
-        navigate(`?school_id=${schoolId}&grade_id=&${event.target.value}`);
+        // searchParams.get('school_id')
+        navigate(`?school_id=${schoolId}&grade_id=${event.target.value}`);
         localStorage.setItem('last_grade_id', event.target.value);
         setIsClassSelected(true);
     };
-
+    
     // console.log(schoolsList);
     return (
         <main className='min-h-[100vh]'>
@@ -59,9 +60,10 @@ const Home = () => {
                 <div className='backdrop-blur-xl bg-black/10 my-2 rounded-xl min-h-[400px] h-auto px-4 py-2'>
                     <form className='flex gap-3 border-b-[1px] border-b-gray-900' >
                         <div>
-                            <label htmlFor="default" className={sty.label}>Maktabni tanlash</label>
-                            <select id="default" value={selectedSchoolId} onChange={handleSchoolChange} className={sty.select} >
-                                <option selected={true} aria-selected hidden>Maktab</option>
+                            <label htmlFor="school" className={sty.label}>Maktabni tanlash</label>
+                            <select id="school" value={selectedSchoolId} onChange={handleSchoolChange} className={sty.select} >
+                                {/* {searchParams("school_id")?console.log("hello")} */}
+                                <option selected aria-selected hidden>Maktab</option>
                                 {schools.map((school) => (
                                     <option key={school.id} value={school.id} >
                                             {school.name}
@@ -86,7 +88,7 @@ const Home = () => {
                     <div className={`flex py-2 ${isClassSelected ? "table-scroll" : ""}`}>
                         {
                             isClassSelected ?
-                                <TabeleMark school={selectedSchoolId} class={selectedClassId} /> :
+                                <TabeleMark schoolId={selectedSchoolId} gradeId={selectedClassId} /> :
                                 <h1 className='text-white text-4xl font-semibold text-center w-full mt-5'>Hozircha hech narsa!</h1>
                         }
                     </div>

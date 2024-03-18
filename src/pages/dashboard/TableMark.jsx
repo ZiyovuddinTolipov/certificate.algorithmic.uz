@@ -2,9 +2,10 @@
 import students from '../../data/students.json';
 import DialogNewDate from './DialogNewDate'
 import DialogMark from './DialogMark'
-import { useEffect } from 'react';
-import {toast} from 'react-hot-toast'
+import { useEffect, useState } from 'react';
+import { toast } from 'react-hot-toast'
 import { getStudentsByClass } from '../../apis/apiService';
+import { useSearchParams } from 'react-router-dom'
 /* eslint-disable react/prop-types */
 
 function Mark(props) {
@@ -29,18 +30,21 @@ function Mark(props) {
     return <button className={`${style.buttons} ${returnColor(props)}`} >{props.comment}</button>
 }
 
-function StudentList (props) {
+function StudentList(props) {
+    const [searchParams] = useSearchParams();
+    const [studentsList, setStudentList] = useState([]);
     const addMark = (id) => {
         document.getElementById(id).showModal()
     }
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await getStudentsByClass(props.class);
+                const res = await getStudentsByClass(props.gradeId);
                 // res.data? toast.success('Login successful!'):toast.error("Xatolik");
                 console.log(res.data)
+                setStudentList(res.data)
             } catch (error) {
-                toast.error("Failed to "+error);
+                toast.error("Failed to " + error);
                 console.error('Error fetching user data:', error);
             }
         };
@@ -49,7 +53,7 @@ function StudentList (props) {
     // const addMark = (id) => {
     //     document.getElementById(id).showModal()
     const sty = {
-        th1: "px-6 py-1 font-medium  whitespace-nowrap text-white bg-black"
+        th1: "px-6 py-1 font-medium  whitespace-nowrap text-white bg-black max-w-[70px]"
     }
     return (
         <table className='table-students-mark  text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 min-w-[100%] h-auto'>
@@ -66,30 +70,25 @@ function StudentList (props) {
                     </th>
                     {Object.keys(students.oquvchilar[0].baholar).map((sana, index) => (
                         <th className='text-center px-6 py-3 text-white' key={index} >{sana}
-                            {/* <DialogNewDate /> */}
-                            {props.schoolId}
+                            <DialogNewDate />
                         </th>
                     ))}
                 </tr>
             </thead>
             <tbody>
-                {students.oquvchilar.map((oquvchi, index) => (
+                {studentsList.map((student, index) => (
                     <tr className='border-b bg-gray-800 border-gray-700' key={index}>
                         <td className='px-6 py-1 bg-black text-white'>{index + 1}</td>
-                        <td className='px-6 py-1 bg-black text-white' style={{ position: 'sticky', left: 0, zIndex: 1 }}>{oquvchi.ism}</td>
+                        <td className='px-6 py-1 bg-black text-white'>{student.fullName}</td>
                         <td
                             className='px-6 py-1 bg-blue-800 cursor-pointer font-bold text-xl text-white'
                             style={{ position: 'sticky', left: 120, zIndex: 1 }}
                             onClick={() => addMark('addAttendance')}
                         >
                             <span>+</span>
-                            <DialogMark school={props.school} class={props.class}/>
+                            <DialogMark school={props.school} class={props.class} />
                         </td>
-                        {/* {
-                            Object.values(oquvchi.baholar).map((allScore, index) => (
-                                <td className={allScore.score >= 0 ? 'text-center' : 'text-center bg-red-900'} key={index}>{allScore.score >= 0 ? <Mark score={allScore.score} comment={allScore.comment} /> : "nb"}</td>
-                            ))
-                        } */}
+                        
                     </tr>
                 ))}
             </tbody>
