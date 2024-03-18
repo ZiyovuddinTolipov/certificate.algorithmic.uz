@@ -40,7 +40,7 @@ function StudentList (props) {
                 // res.data? toast.success('Login successful!'):toast.error("Xatolik");
                 console.log(res.data)
             } catch (error) {
-                toast.error("Failed to"+error);
+                toast.error("Failed to "+error);
                 console.error('Error fetching user data:', error);
             }
         };
@@ -85,11 +85,11 @@ function StudentList (props) {
                             <span>+</span>
                             <DialogMark school={props.school} class={props.class}/>
                         </td>
-                        {
+                        {/* {
                             Object.values(oquvchi.baholar).map((allScore, index) => (
                                 <td className={allScore.score >= 0 ? 'text-center' : 'text-center bg-red-900'} key={index}>{allScore.score >= 0 ? <Mark score={allScore.score} comment={allScore.comment} /> : "nb"}</td>
                             ))
-                        }
+                        } */}
                     </tr>
                 ))}
             </tbody>

@@ -12,6 +12,7 @@ import { Toaster } from "react-hot-toast"
 function App() {
   const routes = useRoutes([
     { path: '/', element: <HomePage /> },
+    { path: '/dashboard', element: <HomePage /> },
     { path: '/test', element: <Test /> },
     { path: '/login', element: <Login /> },
     { path: '/reset', element: <Resetpassword /> },
